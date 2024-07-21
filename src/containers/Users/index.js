@@ -1,10 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import axios from 'axios'
 
-import { Container, H1, Image, ContainerItens, InputLabel, Input, Button, User } from './styles'
+import { Container, H1, Image, ContainerItens,  Button, User } from './styles'
 
-import Avatar from '../../avatar.svg'
+import Avatar from '../../assets/avatar.svg'
 
 import Arrow from '../../assets/arrow.svg'
 
@@ -14,31 +14,10 @@ import trash from '../../assets/trash.svg'
 
 function Users() {
   const [users, setUsers] = useState([]);
-  const InputName = useRef();
-  const InputAge = useRef();
+ 
 
 
-  async function addNewUser() {
-    const data = await axios.post("http://localhost:3001/users", {
-      name: InputName.current.value, 
-      age: InputAge.current.value,
-    });
-    setUsers([...users, { id: Math.random(), name: InputName.current.value, age: InputAge.current.value }])
-    
   
-
-      
-  }
-       
-      useEffect(() => {
-         
-        async function fetcUsers(){
-        const {data: newUsers} = await axios.get ("http://localhost:3001/users");
-
-        setUsers(newUsers);
-        }
-        fetcUsers()
-      }, [])
    
   async function deleteUser(userId) {
 await axios.delete(`http://localhost:3001/users/${userId}`)
@@ -54,16 +33,7 @@ await axios.delete(`http://localhost:3001/users/${userId}`)
       <Image alt="logo-imagem" src={Avatar} />
 
       <ContainerItens>
-        <H1>Hello</H1>
-
-
-        <InputLabel>Nome</InputLabel>
-        <Input ref={InputName} placehoder="Nome" />
-
-        <InputLabel>Idade</InputLabel>
-        <Input ref={InputAge} placehoder="Idade" />
-
-        <Button onClick={addNewUser}>Cadastrar <img alt="seta" src={Arrow} /></Button>
+        <H1>Usuarios</H1>
 
 
         <ul>
@@ -75,6 +45,9 @@ await axios.delete(`http://localhost:3001/users/${userId}`)
             </User>
           ))}
         </ul>
+
+        <Button> <img alt="seta" src={Arrow} /> Voltar
+        </Button>
       </ContainerItens>
 
     </Container>
