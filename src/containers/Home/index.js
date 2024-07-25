@@ -1,5 +1,7 @@
 import React, { useState, useRef } from "react";
 
+
+
 import axios from 'axios'
 
 import { Container, H1, Image, ContainerItens, InputLabel, Input, Button } from './styles'
@@ -46,7 +48,10 @@ function App() {
         <InputLabel>Idade</InputLabel>
         <Input ref={InputAge} placehoder="Idade" />
 
-        <Button onClick={addNewUser}>Cadastrar <img alt="seta" src={Arrow} /></Button>
+        <Button to='/usuarios' onClick={addNewUser}>Cadastrar <img alt="seta" src={Arrow} />
+        </Button>
+
+        
 
 
       </ContainerItens>

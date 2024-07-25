@@ -46,7 +46,7 @@ await axios.delete(`http://localhost:3001/users/${userId}`)
           ))}
         </ul>
 
-        <Button> <img alt="seta" src={Arrow} /> Voltar
+        <Button to='/'> <img alt="seta" src={Arrow} /> Voltar
         </Button>
       </ContainerItens>
 
