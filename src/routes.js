@@ -1,22 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Home from "./containers/Home";
+import Users from "./containers/Users";
 
-import Home from "./containers/Home"
-import Users from "./containers/Users"
-
-
-function Routes() {
-
+function AppRoutes() {
     return (
-        <Router>
-            <Switch>
-                <Router exact path="/" componet={Home} />
-                <Router exact path="usuarios" componet={Users} />
-            </Switch>
-
-        </Router>
-    )
-
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/usuarios" element={<Users />} />
+        </Routes>
+    );
 }
 
-export default Routes
+export default AppRoutes;

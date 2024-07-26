@@ -11,7 +11,7 @@ flex-direction: column;
 align-items: center;
 gap: 40px;
 
-min-height: 100vh
+min-height: 100vh;
 `;
 
 export const Image = styled.img`
@@ -122,5 +122,3 @@ gap: 20px;
 }
 
 `;
-
-
