@@ -11,7 +11,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  max-height: 100vh;
+  min-height: 100vh;
 `;
 
 export const Image = styled.img`
