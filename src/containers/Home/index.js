@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { H1 } from "../../componets/title"
+import  H1  from "../../componets/title"
 
-import { Container, Image, ContainerItens, InputLabel, Input, Button } from './styles';
+import { Container, Image, ContainerItens, InputLabel, Input, Button } from "../Home/styles";
 import People from '../../assets/people.svg';
 import Arrow from '../../assets/arrow.svg';
 
