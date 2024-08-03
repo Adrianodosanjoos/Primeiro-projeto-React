@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom'
 import axios from 'axios';
 
 import { Container, H1, Image, ContainerItens, Button, User } from './styles';
@@ -9,6 +9,7 @@ import trash from '../../assets/trash.svg';
 
 function Users() {
   const [users, setUsers] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchData() {
@@ -24,6 +25,10 @@ function Users() {
     setUsers(newUsers);
   }
 
+  function goBackPage() {
+    navigate(-1);
+  }
+
   return (
     <Container>
       <Image alt="logo-imagem" src={Avatar} />
@@ -37,7 +42,7 @@ function Users() {
             </User>
           ))}
         </ul>
-        <Button to="/">
+        <Button onClick={goBackPage}>
           <img alt="seta" src={Arrow} /> Voltar
         </Button>
       </ContainerItens>

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom/';
+
 import Background from '../../assets/background1.svg'
 
 export const Container = styled.div`
@@ -10,7 +10,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 gap: 40px;
-
+height: 100%;
 min-height: 100vh;
 `;
 
@@ -29,25 +29,15 @@ background: linear-gradient(
 
   display: flex;
   flex-direction: column;
-  height: 100vh;
+
+  height: 100%;
+  min-height: calc(100vh - 137px);
 
  
  
 
 `;
 
-export const H1 = styled.h1`
-font-style: normal;
-font-weight: bold;
-font-size:34px;
-line-height: 40px;
-
-text-align: center;
-
-color: #ffffffff;
-
-margin-bottom: 80px;
-`;
 
 export const InputLabel = styled.p`
 letter-spacing: -0.408px;
@@ -90,7 +80,7 @@ color: #ffffff;
 
 `;
 
-export const Button = styled(Link)`
+export const Button = styled.button`
 width: 342px;
 height: 74px;
 margin-top: 130px;
