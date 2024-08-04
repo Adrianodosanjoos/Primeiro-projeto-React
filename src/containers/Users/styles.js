@@ -35,15 +35,7 @@ export const ContainerItens = styled.div`
   min-height: calc(100vh - 137px);
 `;
 
-export const H1 = styled.h1`
-  font-style: normal;
-  font-weight: bold;
-  font-size: 34px;
-  line-height: 40px;
-  text-align: center;
-  color: #ffffffff;
-  margin-bottom: 80px;
-`;
+
 
 export const Button = styled.button`
   width: 342px;

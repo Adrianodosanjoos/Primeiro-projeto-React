@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import {  useNavigate } from 'react-router-dom'
 import axios from 'axios';
 
-import { Container, H1, Image, ContainerItens, Button, User } from './styles';
+import { Container,  Image, ContainerItens, Button, User } from './styles';
 import Avatar from '../../assets/avatar.svg';
 import Arrow from '../../assets/arrow.svg';
 import trash from '../../assets/trash.svg';
+
+import H1 from '../../components/title';
 
 function Users() {
   const [users, setUsers] = useState([]);
