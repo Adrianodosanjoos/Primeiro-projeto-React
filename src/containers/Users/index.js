@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import {  useNavigate } from 'react-router-dom'
 import axios from 'axios';
 
-import { Container,  Image, ContainerItens, Button, User } from './styles';
+import { Container,  Image, User } from './styles';
 import Avatar from '../../assets/avatar.svg';
 import Arrow from '../../assets/arrow.svg';
 import trash from '../../assets/trash.svg';
 
-import H1 from '../../components/title';
+import  H1  from "../../componets/title"
+import  ContainerItens  from "../../componets/containeritens";
+import  Button  from "../../componets/Button";
 
 function Users() {
   const [users, setUsers] = useState([]);
@@ -34,7 +36,7 @@ function Users() {
   return (
     <Container>
       <Image alt="logo-imagem" src={Avatar} />
-      <ContainerItens>
+      <ContainerItens isBlur={"true"}>
         <H1>Usuarios</H1>
         <ul>
           {users.map((user) => (
@@ -44,7 +46,7 @@ function Users() {
             </User>
           ))}
         </ul>
-        <Button onClick={goBackPage}>
+        <Button isback={true}onClick={goBackPage}>
           <img alt="seta" src={Arrow} /> Voltar
         </Button>
       </ContainerItens>
