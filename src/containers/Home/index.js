@@ -5,7 +5,7 @@ import  H1  from "../../componets/title";
 import  ContainerItens  from "../../componets/containeritens";
 import  Button from "../../componets/Button";
 
-import { Container, Image, InputLabel, Input,} from "/styles";
+import { Container, Image, InputLabel, Input,} from "./styles";
 import People from '../../assets/people.svg';
 import Arrow from '../../assets/arrow.svg';
 
