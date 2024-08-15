@@ -16,7 +16,7 @@ function Home() {
   const navigate = useNavigate();
 
   async function addNewUser() {
-    await axios.post("https://projeto-node-2.vercel.app/", {
+    await axios.post("https://projeto-node-2.vercel.app/users", {
       name: InputName.current.value,
       age: InputAge.current.value,
     });

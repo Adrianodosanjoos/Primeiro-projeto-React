@@ -17,14 +17,14 @@ function Users() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get("https://projeto-node-2.vercel.app/");
+      const response = await axios.get("https://projeto-node-2.vercel.app/users");
       setUsers(response.data);
     }
     fetchData();
   }, []);
 
   async function deleteUser(userId) {
-    await axios.delete(`https://projeto-node-2.vercel.app/`);
+    await axios.delete(`https://projeto-node-2.vercel.app/users/${userId}`);
     const newUsers = users.filter((user) => user.id !== userId);
     setUsers(newUsers);
   }
